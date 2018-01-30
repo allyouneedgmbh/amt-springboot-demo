@@ -1,0 +1,15 @@
+# maven related files
+/target/
+
+# eclipse related files
+/.settings/
+.jsdtscope
+.project
+.classpath
+
+# amt related files
+./amt/
+configuration
+application.jar
+application.pid
+application.log
