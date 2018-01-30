@@ -1,0 +1,29 @@
+package de.ayn.services.amt.rest;
+
+import static java.util.Collections.emptyList;
+import java.util.Map;
+import javax.ws.rs.Consumes;
+import javax.ws.rs.GET;
+import javax.ws.rs.Path;
+import javax.ws.rs.Produces;
+import javax.ws.rs.core.MediaType;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import de.ayn.services.amt.service.VersionService;
+
+@Controller
+@Path("public")
+@Produces(MediaType.APPLICATION_JSON)
+@Consumes(MediaType.APPLICATION_JSON)
+public class PublicEndpoint {
+
+    @Autowired
+    private VersionService service;
+    
+    @GET
+    @Path("version")
+    public Result<Map<String, Object>>  version() {
+        return new Result<>(Result.State.OK, service.simpleVersionInfo(), emptyList());
+    }
+
+}
