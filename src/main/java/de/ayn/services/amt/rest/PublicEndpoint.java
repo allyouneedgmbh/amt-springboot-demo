@@ -31,7 +31,7 @@ public class PublicEndpoint {
     @GET
     @Path("greeting/{name}")
     public Result<String> greeting(@PathParam("name") String name) {
-        String message = String.format("Hallo %s!", Optional.ofNullable(name).orElse("anonymous"));
+        String message = String.format("Hallo %s nice to see you again!", Optional.ofNullable(name).orElse("anonymous"));
         return new Result<>(Result.State.OK, message, emptyList());
     }
 
