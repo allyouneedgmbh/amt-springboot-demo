@@ -8,8 +8,12 @@
 .classpath
 
 # amt related files
-./amt/
+/.amt/
+/source/
 configuration
 application.jar
+application.war
 application.pid
 application.log
+amt-mvn-settings.xml
+amt-logback.xml
