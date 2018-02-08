@@ -41,6 +41,12 @@ public class PublicEndpoint {
         return new Result<>(Result.State.OK, "next-2-method", emptyList());
     }
 
+    @GET
+    @Path("next-3-method")
+    public Result<String> next3method() {
+        return new Result<>(Result.State.OK, "next-3-method", emptyList());
+    }
+
 
 
 }
