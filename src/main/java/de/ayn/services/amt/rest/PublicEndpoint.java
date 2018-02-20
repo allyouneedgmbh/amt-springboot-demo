@@ -4,6 +4,7 @@ import static java.util.Collections.emptyList;
 import java.security.InvalidKeyException;
 import java.security.NoSuchAlgorithmException;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.Formatter;
 import java.util.Map;
 import java.util.Optional;
@@ -70,4 +71,13 @@ public class PublicEndpoint {
             return new Result<>(Result.State.ERROR,null, Arrays.asList(e.getMessage()));
         }
     }
+    
+    
+    @GET
+    @Path("staticString")
+    public Result<String> getStaticString() {
+        return new Result<>(Result.State.OK,"TEST",Collections.emptyList());
+    }
+
+    
 }
