@@ -5,7 +5,7 @@
 
 	<groupId>de.ayn.services.amt</groupId>
 	<artifactId>amt-demo-service</artifactId>
-	<version>2018-02.010</version>
+	<version>2018-02.011</version>
     <packaging>war</packaging>
 
 	<properties>
