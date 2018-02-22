@@ -76,7 +76,7 @@ public class PublicEndpoint {
     @GET
     @Path("staticString")
     public Result<String> getStaticString() {
-        return new Result<>(Result.State.OK,"TEST 8",Collections.emptyList());
+        return new Result<>(Result.State.OK,"TEST 9",Collections.emptyList());
     }
 
     
